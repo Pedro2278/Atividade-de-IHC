@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa de Opinião - TADS</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        .logo {
+            width: 300px; /* Ajuste o tamanho da imagem conforme necessário */
+            height: auto; /* Mantém a proporção original da imagem */
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="https://th.bing.com/th/id/R.0ad83653dbb10fd30fa80d6a1f930df5?rik=kHKKqOoOIm18dg&riu=http%3a%2f%2fwww.infoescola.com%2fwp-content%2fuploads%2f2015%2f12%2fIFPI.jpg&ehk=ylhATI8Zee7YejaWFCD2XvuTPZPGvnMQ1yEmf8vACdI%3d&risl=&pid=ImgRaw&r=0." alt="Logo IFPI" class="logo">
+    <h1>Pesquisa de Opinião sobre o Curso de TADS</h1>
+</header>
+
+<main>
+    <form id="pesquisaForm">
+        <fieldset>
+            <legend>Dados Demográficos</legend>
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" required>
+
+            <label for="genero">Gênero:</label>
+            <select id="genero" name="genero">
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="outro">Outro</option>
+                <option value="prefiroNaoDizer">Prefiro não dizer</option>
+            </select>
+
+            <label for="escolaridade">Nível de Escolaridade:</label>
+            <select id="escolaridade" name="escolaridade">
+                <option value="fundamental">Ensino Fundamental</option>
+                <option value="medio">Ensino Médio</option>
+                <option value="tecnico">Técnico</option>
+                <option value="superior">Superior</option>
+                <option value="pos">Pós-graduação</option>
+            </select>
+
+            <label for="ocupacao">Ocupação atual:</label>
+            <select id="ocupacao" name="ocupacao">
+                <option value="estudante">Estudante</option>
+                <option value="trabalhador">Trabalhador</option>
+                <option value="autonomo">Autônomo</option>
+                <option value="desempregado">Desempregado</option>
+            </select>
+
+            <label for="cidade">Cidade e Estado:</label>
+            <input type="text" id="cidade" name="cidade" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Sobre o Curso de TADS</legend>
+
+            <label for="conhecimento">Grau de conhecimento sobre TADS:</label>
+            <select id="conhecimento" name="conhecimento">
+                <option value="nenhum">Nenhum</option>
+                <option value="basico">Básico</option>
+                <option value="intermediario">Intermediário</option>
+                <option value="avancado">Avançado</option>
+            </select>
+
+            <label>Já cursou ou está cursando TADS?</label>
+            <input type="radio" id="cursandoSim" name="cursando" value="sim">
+            <label for="cursandoSim">Sim</label>
+            <input type="radio" id="cursandoNao" name="cursando" value="nao">
+            <label for="cursandoNao">Não</label>
+
+            <label for="instituicao">Se sim, em qual instituição?</label>
+            <input type="text" id="instituicao" name="instituicao">
+
+            <label for="satisfacao">Qual o seu nível de satisfação com o curso de TADS?</label>
+            <select id="satisfacao" name="satisfacao">
+                <option value="muito_satisfeito">Muito satisfeito</option>
+                <option value="satisfeito">Satisfeito</option>
+                <option value="neutro">Neutro</option>
+                <option value="insatisfeito">Insatisfeito</option>
+                <option value="muito_insatisfeito">Muito insatisfeito</option>
+            </select>
+
+            <label for="pontos_positivos">Quais os principais pontos positivos do curso de TADS?</label>
+            <textarea id="pontos_positivos" name="pontos_positivos"></textarea>
+
+            <label for="pontos_negativos">Quais os principais pontos negativos do curso de TADS?</label>
+            <textarea id="pontos_negativos" name="pontos_negativos"></textarea>
+
+            <label for="sugestoes">Quais as suas sugestões para melhorar o curso de TADS?</label>
+            <textarea id="sugestoes" name="sugestoes"></textarea>
+        </fieldset>
+
+        <button type="submit">Enviar Respostas</button>
+    </form>
+</main>
+
+<footer>
+    <p>Projeto acadêmico - Pesquisa de Opinião sobre TADS</p>
+</footer>
+
+<!-- VLibras -->
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+</body>
+</html>
